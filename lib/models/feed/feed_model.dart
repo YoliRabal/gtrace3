@@ -36,17 +36,17 @@ class FeedModel {
     };
   }
 
-  factory FeedModel.fromJson(Map<String, dynamic> map, String documentId) {
+  factory FeedModel.fromJson(Map<String, dynamic> json) {
     return FeedModel(
-      id: documentId,
-      titulo: map['titulo'] ?? '',
-      descripcion: map['descripcion'] ?? '',
-      ubicacion: map['ubicacion'] ?? '',
-      fecha: map['fecha'] ?? '',
-      categoria: map['categoria'] ?? '',
-      imagen: map['imagen'] ?? '',
-      organizador: map['organizador'] ?? '',
-      organizadorImagen: map['organizadorImagen'] ?? '',
+      id: json['titulo'] ?? '',
+      titulo: json['titulo'] ?? '',
+      descripcion: json['descripcion'] ?? '',
+      ubicacion: json['ubicacion'] ?? '',
+      fecha: json['fecha'] ?? '',
+      categoria: json['categoria'] ?? '',
+      imagen: json['imagen'] ?? '',
+      organizador: json['organizador'] ?? '',
+      organizadorImagen: json['organizadorImagen'] ?? '',
     );
   }
 }

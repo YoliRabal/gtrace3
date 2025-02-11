@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "274920232484",
+    "project_id": "gtracebbdd",
+    "storage_bucket": "gtracebbdd.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:274920232484:android:43539bce7dad6804e26ab1",
+        "android_client_info": {
+          "package_name": "com.example.gtrace3"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA6T_jnvXV-tLA5qrJOP4ltTfY1IY9xxUU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

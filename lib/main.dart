@@ -1,6 +1,6 @@
 import 'package:gtrace3/config/imports.dart';
 import 'package:gtrace3/functions/move_to.dart';
-import 'package:gtrace3/screens/detailspage.dart';
+import 'package:gtrace3/screens/details/detailspage.dart';
 import 'package:gtrace3/screens/home.dart';
 import 'firebase_options.dart';
 
@@ -21,7 +21,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'GTRace',
       theme: ThemeData(),
-      home: const MyHomePage(),
+      home: const HomePage(),
     );
   }
 }
@@ -44,19 +44,11 @@ class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: GestureDetector(
-        onTap: () {
-          goTo(context, const DetailPage());
-        },
-        child: Container(
-          color: Colors.black,
-          child: ListView(
-            children: [
+      body: ListView(
+        children: [
 
-              TextoExtragrande("Hola")
-            ],
-          ),
-        ),
+          TextoExtragrande("Hola")
+        ],
       ),
     );
   }

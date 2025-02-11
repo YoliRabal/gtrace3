@@ -1,7 +1,10 @@
 import 'package:gtrace3/config/imports.dart';
+import 'package:gtrace3/models/feed/feed_model.dart';
 
 class DetailPage extends StatelessWidget {
-  const DetailPage({super.key});
+
+  final FeedModel feedModel;
+  const DetailPage({super.key, required this.feedModel});
 
   @override
   Widget build(BuildContext context) {

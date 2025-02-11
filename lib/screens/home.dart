@@ -67,6 +67,8 @@ class _HomePageState extends State<HomePage> {
 
   loadData() async {
 
+    //Model --> Firebase Read --> Generas variables en pantalla --> Llamada desde pantalla --> Estado --> Pasar por parametro
+
     list_feed = await getFeed();
     setState(() {});
 

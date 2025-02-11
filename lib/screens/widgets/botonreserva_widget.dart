@@ -1,9 +1,6 @@
-import 'package:flutter/material.dart';
-import 'package:gtrace3/config/styles/text_styles.dart';
-import 'package:gtrace3/config/theme/theme.dart';
+import 'package:gtrace3/config/imports.dart';
 
 class BotonreservaWidget extends StatelessWidget {
-
 
   const BotonreservaWidget({super.key});
 

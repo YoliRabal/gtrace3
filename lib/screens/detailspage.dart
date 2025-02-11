@@ -1,12 +1,4 @@
-import 'package:flutter/material.dart';
-import 'widgets/cabecera_widget.dart';
-import 'widgets/imagen_widget.dart';
-import 'widgets/descripcion_widget.dart';
-import 'widgets/horario_widget.dart';
-import 'widgets/ruta_widget.dart';
-import 'widgets/botonreserva_widget.dart';
-import 'widgets/espacio.dart';
-import 'package:gtrace3/config/theme/theme.dart';
+import 'package:gtrace3/config/imports.dart';
 
 class DetailPage extends StatelessWidget {
   const DetailPage({super.key});
@@ -24,15 +16,15 @@ class DetailPage extends StatelessWidget {
 
             DescripcionWidget(),
 
-            EspacioFull(size: 10),
+            Espacio(ESPACIO_PEQUENO),
 
             HorarioWidget(),
 
-            EspacioFull(size: 20),
+            Espacio(ESPACIO_MEDIANO),
 
             RutaWidget(),
 
-            EspacioFull(size: 20),
+            Espacio(ESPACIO_MEDIANO),
 
             BotonreservaWidget(),
 

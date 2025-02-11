@@ -1,0 +1,12 @@
+export 'package:firebase_core/firebase_core.dart';
+export 'package:flutter/foundation.dart';
+export 'package:flutter/material.dart';
+export 'package:gtrace3/config/styles/text_styles.dart';
+export 'package:gtrace3/config/theme/theme.dart';
+export 'package:gtrace3/screens/widgets/botonreserva_widget.dart';
+export 'package:gtrace3/screens/widgets/cabecera_widget.dart';
+export 'package:gtrace3/screens/widgets/descripcion_widget.dart';
+export 'package:gtrace3/screens/widgets/espacio.dart';
+export 'package:gtrace3/screens/widgets/horario_widget.dart';
+export 'package:gtrace3/screens/widgets/imagen_widget.dart';
+export 'package:gtrace3/screens/widgets/ruta_widget.dart';

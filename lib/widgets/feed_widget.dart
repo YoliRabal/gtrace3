@@ -1,15 +1,9 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:gtrace3/config/imports.dart';
 import 'package:gtrace3/functions/move_to.dart';
 import 'package:gtrace3/models/feed/feed_model.dart';
 import 'package:gtrace3/screens/details/detailspage.dart';
-
-
-
-
-FirebaseFirestore firestore = FirebaseFirestore.instance;
 
 class FeedWidget extends StatelessWidget {
 
@@ -20,11 +14,11 @@ class FeedWidget extends StatelessWidget {
   Widget build(BuildContext context) {
 
     return GestureDetector(
-      
+
       onTap: (){
-        goTo(context, DetailPage(feedModel: feedModel,));
+        goTo(context, DetailPage(feedModel: feedModel));
       },
-      
+
       child: Container(
         color: Colors.black,
         padding: EdgeInsets.all(12),
@@ -66,10 +60,9 @@ class FeedWidget extends StatelessWidget {
 
             Stack(
               children: [
-                Image.network(
-                  'https://motor.elpais.com/wp-content/uploads/2023/04/Bugatti-Chiron.jpg',
-                  width: double.infinity,
-                  fit: BoxFit.cover,
+                Image.network(feedModel.imagen,
+                width: double.infinity,
+                fit: BoxFit.cover,
                 ),
                 Positioned(
                   top: 10,
@@ -79,14 +72,7 @@ class FeedWidget extends StatelessWidget {
                         horizontal: 6,
                         vertical: 2),
                     color: Colors.orange,
-                    child: Text(
-                      "Parade",
-                      style: TextStyle(
-                        color: Colors.black,
-                        fontSize: 12,
-                        fontWeight: FontWeight.bold,
-                      ),
-                    ),
+                    child: TextoCaption(feedModel.categoria1),
                   ),
                 ),
               ],
@@ -102,7 +88,7 @@ class FeedWidget extends StatelessWidget {
 
                 Espacio(ESPACIO_PEQUENO),
 
-                TextoCaption("Marbella",),
+                TextoCaption(feedModel.ubicacion),
 
                 Espacio(ESPACIO_PEQUENO),
 
@@ -120,7 +106,9 @@ class FeedWidget extends StatelessWidget {
 
             Espacio(ESPACIO_EXTRAPEQUENO),
 
-            TextoBody(feedModel.descripcion),
+            TextoBody(feedModel.descripcion,
+                maxlines: null,
+                textOverflow: TextOverflow.visible),
 
             Espacio(ESPACIO_PEQUENO),
 
@@ -129,7 +117,7 @@ class FeedWidget extends StatelessWidget {
           ],
         ),
       ),
-      
+
     );
 
   }

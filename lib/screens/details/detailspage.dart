@@ -1,9 +1,10 @@
-import 'package:gtrace3/config/imports.dart';
+import 'package:flutter/material.dart';
 import 'package:gtrace3/models/feed/feed_model.dart';
+import 'package:gtrace3/config/imports.dart';
 
 class DetailPage extends StatelessWidget {
-
   final FeedModel feedModel;
+
   const DetailPage({super.key, required this.feedModel});
 
   @override
@@ -14,23 +15,14 @@ class DetailPage extends StatelessWidget {
         color: COLOR_BACKGROUND,
         child: ListView(
           children: [
-
-            ImagenWidget(),
-
-            DescripcionWidget(),
-
+            ImagenWidget(feedModel: feedModel),
+            DescripcionWidget(feedModel: feedModel),
             Espacio(ESPACIO_PEQUENO),
-
-            HorarioWidget(),
-
+            HorarioWidget(feedModel: feedModel),
             Espacio(ESPACIO_MEDIANO),
-
-            RutaWidget(),
-
+            RutaWidget(feedModel: feedModel),
             Espacio(ESPACIO_MEDIANO),
-
             BotonreservaWidget(),
-
           ],
         ),
       ),

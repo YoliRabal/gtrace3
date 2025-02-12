@@ -1,6 +1,4 @@
-import 'package:flutter/material.dart';
-import 'package:gtrace3/config/theme/theme.dart';
-import 'package:gtrace3/widgets/espacio.dart';
+import 'package:gtrace3/config/imports.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
 class BusquedaWidget extends StatelessWidget {

@@ -1,14 +1,15 @@
-import 'package:flutter/material.dart';
-import 'package:gtrace3/config/styles/text_styles.dart';
-import 'package:gtrace3/config/theme/theme.dart';
+import 'package:gtrace3/config/imports.dart';
+import 'package:gtrace3/models/feed/feed_model.dart';
 
 class ImagenWidget extends StatelessWidget {
+  final FeedModel feedModel;
+  const ImagenWidget({super.key, required this.feedModel});
+
   @override
   Widget build(BuildContext context) {
     return Column(
       children: [
-        Image.network(
-          'https://motor.elpais.com/wp-content/uploads/2023/04/Bugatti-Chiron.jpg',
+        Image.network(feedModel.imagen,
           width: double.infinity,
           height: 350,
           fit: BoxFit.cover,
@@ -18,25 +19,21 @@ class ImagenWidget extends StatelessWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Text(
-                "Bluewater Parade GT",
-                style: estiloTitulo(fontWeight: TEXTO_NEGRITA),
-              ),
+              TextoTitulo(feedModel.titulo),
               SizedBox(height: 4),
-              Text(
-                "Vente a disfrutar a nuestro Parade de GT Race Marbella",
-                style: estiloBody(color: COLOR_SUBTEXT),
-              ),
+              TextoBody(feedModel.descripcion,
+                  maxlines: null,
+                  textOverflow: TextOverflow.visible),
               SizedBox(height: 10),
               Row(
                 children: [
                   Icon(Icons.location_on, color: COLOR_ACCENT, size: 14),
                   SizedBox(width: 2),
-                  Text("Marbella", style: estiloSmall()),
+                  TextoSmall(feedModel.ubicacion),
                   SizedBox(width: 10),
                   Icon(Icons.calendar_today, color: COLOR_ACCENT, size: 14),
                   SizedBox(width: 2),
-                  Text("Lunes 28 Abril", style: estiloSmall()),
+                  TextoSmall(feedModel.fecha),
                 ],
               ),
               SizedBox(height: 15),
@@ -48,13 +45,8 @@ class ImagenWidget extends StatelessWidget {
                       color: COLOR_ACCENT,
                       borderRadius: BorderRadius.circular(5),
                     ),
-                    child: Text(
-                      "Parade",
-                      style: estiloBody(
-                        color: Colors.black,
-                        fontWeight: TEXTO_NEGRITA,
-                      ),
-                    ),
+                    child: TextoBody(feedModel.categoria1,
+                    color: Colors.black),
                   ),
                   SizedBox(width: 10),
                   Container(
@@ -63,13 +55,8 @@ class ImagenWidget extends StatelessWidget {
                       color: COLOR_ACCENT,
                       borderRadius: BorderRadius.circular(5),
                     ),
-                    child: Text(
-                      "Ruta",
-                      style: estiloBody(
-                        color: Colors.black,
-                        fontWeight: TEXTO_NEGRITA,
-                      ),
-                    ),
+                    child: TextoBody(feedModel.categoria2,
+                        color: Colors.black),
                   ),
                 ],
               ),

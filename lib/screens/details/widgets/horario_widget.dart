@@ -1,9 +1,10 @@
-import 'package:flutter/material.dart';
-import 'package:gtrace3/config/styles/text_styles.dart';
-import 'package:gtrace3/config/theme/theme.dart';
+import 'package:gtrace3/config/imports.dart';
+import 'package:gtrace3/models/feed/feed_model.dart';
+
 
 class HorarioWidget extends StatelessWidget {
-  const HorarioWidget({super.key});
+  final FeedModel feedModel;
+  const HorarioWidget({super.key, required this.feedModel});
 
   @override
   Widget build(BuildContext context) {
@@ -31,13 +32,8 @@ class HorarioWidget extends StatelessWidget {
                 Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    Text(
-                      "18:00",
-                      style: TextStyle(
-                          color: COLOR_TEXT,
-                          fontSize: 22,
-                          fontWeight: TEXTO_NEGRITA),
-                    ),
+                    TextoTitulo(feedModel.horaInicio),
+                      //"18:00",
                     Text(
                       "Hora de inicio",
                       style: estiloSmall(color: COLOR_SUBTEXT),
@@ -47,17 +43,10 @@ class HorarioWidget extends StatelessWidget {
                 Column(
                   crossAxisAlignment: CrossAxisAlignment.end,
                   children: [
-                    Text(
-                      "18 Abril",
-                      style: TextStyle(
-                          color: COLOR_TEXT,
-                          fontSize: 22,
-                          fontWeight: FontWeight.bold),
-                    ),
-                    Text(
-                      "2025",
-                      style: estiloSmall(color: COLOR_SUBTEXT),
-                    ),
+                    TextoTitulo(feedModel.diaMes),
+                      //"18 Abril",
+                    TextoCaption(feedModel.anio),
+                      //"2025",
                   ],
                 ),
               ],

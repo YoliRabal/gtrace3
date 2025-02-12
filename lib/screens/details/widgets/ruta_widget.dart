@@ -1,9 +1,9 @@
-import 'package:flutter/material.dart';
-import 'package:gtrace3/config/styles/text_styles.dart';
-import 'package:gtrace3/config/theme/theme.dart';
+import 'package:gtrace3/config/imports.dart';
+import 'package:gtrace3/models/feed/feed_model.dart';
 
 class RutaWidget extends StatelessWidget {
-  const RutaWidget({super.key});
+  final FeedModel feedModel;
+  const RutaWidget({super.key, required this.feedModel});
 
   @override
   Widget build(BuildContext context) {
@@ -39,12 +39,10 @@ class RutaWidget extends StatelessWidget {
                           ],
                         ),
                         SizedBox(height:5),
-                        Text("Calle la Esperanza 23, Marbella",
-                            style: estiloSmall(color: COLOR_SUBTEXT)),
+                        TextoSmall(feedModel.puntoSalida)
                       ],
                     ),
-                    Text("20:00 | 18 Abril",
-                        style: estiloBody(fontWeight: TEXTO_NEGRITA)),
+                    TextoSmall(feedModel.infoSalida)
                   ],
                 ),
                 SizedBox(height: 10),
@@ -66,12 +64,14 @@ class RutaWidget extends StatelessWidget {
                     ),
                     Column(
                       children: [
-                        Text("120 Km", style: estiloBody(fontWeight: TEXTO_NEGRITA)),
+                        TextoSmall(feedModel.distancia),
+              //"120 Km"
                       ],
                     ),
                     Column(
                       children: [
-                        Text("1h Aprox.", style: estiloBody(fontWeight: TEXTO_NEGRITA)),
+                        TextoSmall(feedModel.duracion),
+              //"1h Aprox.
                       ],
                     ),
                   ],
@@ -98,12 +98,12 @@ class RutaWidget extends StatelessWidget {
                           ],
                         ),
                         SizedBox(height:5),
-                        Text("Calle la Esperanza 23, Marbella",
-                            style: estiloSmall(color: COLOR_SUBTEXT)),
+                        TextoSmall(feedModel.puntoLlegada),
+              //"Calle la Esperanza 23, Marbella"
                       ],
                     ),
-                    Text("23:00 | 18 Abril",
-                        style: estiloBody(fontWeight: TEXTO_NEGRITA)),
+                    TextoSmall(feedModel.infoLlegada),
+              //"23:00 | 18 Abril"
                   ],
                 ),
               ],

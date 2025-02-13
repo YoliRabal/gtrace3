@@ -69,7 +69,7 @@ class FeedWidget extends StatelessWidget {
                   left:10,
                   child: Container(
                     padding: EdgeInsets.symmetric(
-                        horizontal: 6,
+                        horizontal: 5,
                         vertical: 2),
                     color: Colors.orange,
                     child: TextoCaption(feedModel.categoria1),

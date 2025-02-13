@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:gtrace3/widgets/espacio.dart';
-import 'package:gtrace3/widgets/cabecera_widget.dart';
-import 'package:gtrace3/widgets/busqueda_widget.dart';
-import 'package:gtrace3/widgets/feed_widget.dart';
+import 'package:gtrace3/screens/home/widgets/espacio.dart';
+import 'package:gtrace3/screens/home/widgets/cabecera_widget.dart';
+import 'package:gtrace3/screens/home/widgets/busqueda_widget.dart';
+import 'package:gtrace3/screens/home/widgets/feed_widget.dart';
 import 'package:gtrace3/functions/firebase/firebase_reads.dart';
 import 'package:gtrace3/models/feed/feed_model.dart';
 import 'package:gtrace3/screens/details/detailspage.dart';
